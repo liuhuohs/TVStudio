@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD MAPPER 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.imooc.bilibili.dao.DemoDao">
+<mapper namespace="com.HITwh.TVStudio.dao.DemoDao">
 
     <select id="query" parameterType="java.lang.Long" resultType="java.lang.Long">
         select id from t_demo where id = #{id}
