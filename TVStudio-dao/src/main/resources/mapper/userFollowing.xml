@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD MAPPER 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.imooc.bilibili.dao.UserFollowingDao">
+<mapper namespace="com.HITwh.TVStudio.dao.UserFollowingDao">
 
     <delete id="deleteUserFollowing">
         delete from
@@ -11,7 +11,7 @@
             userId = #{userId} and followingId = #{followingId}
     </delete>
 
-    <insert id="addUserFollowing" parameterType="com.imooc.TVStudio.domain.UserFollowing">
+    <insert id="addUserFollowing" parameterType="com.HITwh.TVStudio.domain.UserFollowing">
         insert into
             t_user_following(
                 userId,
@@ -26,7 +26,7 @@
             )
     </insert>
 
-    <select id="getUserFollowings" parameterType="java.lang.Long" resultType="com.imooc.TVStudio.domain.UserFollowing">
+    <select id="getUserFollowings" parameterType="java.lang.Long" resultType="com.HITwh.TVStudio.domain.UserFollowing">
         select
             *
         from
@@ -35,7 +35,7 @@
             userId = #{userId}
     </select>
 
-    <select id="getUserFans" parameterType="java.lang.Long" resultType="com.imooc.TVStudio.domain.UserFollowing">
+    <select id="getUserFans" parameterType="java.lang.Long" resultType="com.HITwh.TVStudio.domain.UserFollowing">
         select
             *
         from

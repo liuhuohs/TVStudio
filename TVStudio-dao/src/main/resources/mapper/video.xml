@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.imooc.bilibili.dao.VideoDao">
+<mapper namespace="com.HITwh.TVStudio.dao.VideoDao">
 
-    <insert id="addVideos" parameterType="com.imooc.TVStudio.domain.Video" useGeneratedKeys="true" keyProperty="id">
+    <insert id="addVideos" parameterType="com.HITwh.TVStudio.domain.Video" useGeneratedKeys="true" keyProperty="id">
         insert into
             t_video(
                 id,
@@ -57,7 +57,7 @@
             </if>
     </select>
 
-    <select id="pageListVideos" parameterType="java.util.Map" resultType="com.imooc.TVStudio.domain.Video">
+    <select id="pageListVideos" parameterType="java.util.Map" resultType="com.HITwh.TVStudio.domain.Video">
         select
             *
         from
@@ -71,7 +71,7 @@
         limit #{start}, #{limit}
     </select>
 
-    <select id="getVideoById" parameterType="java.lang.Long" resultType="com.imooc.TVStudio.domain.Video">
+    <select id="getVideoById" parameterType="java.lang.Long" resultType="com.HITwh.TVStudio.domain.Video">
         select
             *
         from
@@ -80,7 +80,7 @@
             id = #{id}
     </select>
 
-    <insert id="addVideoLike" parameterType="com.imooc.TVStudio.domain.VideoLike">
+    <insert id="addVideoLike" parameterType="com.HITwh.TVStudio.domain.VideoLike">
         insert into
             t_video_like(
                 userId,
@@ -110,7 +110,7 @@
             videoId = #{videoId}
     </select>
 
-    <select id="getVideoLikeByVideoIdAndUserId" resultType="com.imooc.TVStudio.domain.VideoLike">
+    <select id="getVideoLikeByVideoIdAndUserId" resultType="com.HITwh.TVStudio.domain.VideoLike">
         select
             *
         from
@@ -121,7 +121,7 @@
     </select>
 
 
-    <insert id="addVideoCollection" parameterType="com.imooc.TVStudio.domain.VideoCollection">
+    <insert id="addVideoCollection" parameterType="com.HITwh.TVStudio.domain.VideoCollection">
         insert into
             t_video_collection(
                 userId,
@@ -153,7 +153,7 @@
             videoId = #{videoId}
     </select>
 
-    <select id="getVideoCollectionByVideoIdAndUserId" resultType="com.imooc.TVStudio.domain.VideoCollection">
+    <select id="getVideoCollectionByVideoIdAndUserId" resultType="com.HITwh.TVStudio.domain.VideoCollection">
         select
             *
         from
@@ -163,7 +163,7 @@
             and userId = #{userId}
     </select>
 
-    <select id="getVideoCoinByVideoIdAndUserId" resultType="com.imooc.TVStudio.domain.VideoCoin">
+    <select id="getVideoCoinByVideoIdAndUserId" resultType="com.HITwh.TVStudio.domain.VideoCoin">
         select
             *
         from
@@ -173,7 +173,7 @@
             and userId = #{userId}
     </select>
 
-    <insert id="addVideoCoin" parameterType="com.imooc.TVStudio.domain.VideoCoin">
+    <insert id="addVideoCoin" parameterType="com.HITwh.TVStudio.domain.VideoCoin">
         insert into
             t_video_coin(
                 userId,
@@ -188,7 +188,7 @@
         )
     </insert>
 
-    <update id="updateVideoCoin" parameterType="com.imooc.TVStudio.domain.VideoCoin">
+    <update id="updateVideoCoin" parameterType="com.HITwh.TVStudio.domain.VideoCoin">
         update
             t_video_coin
         set
@@ -208,7 +208,7 @@
             videoId = #{videoId}
     </select>
 
-    <insert id="addVideoComment" parameterType="com.imooc.TVStudio.domain.VideoComment">
+    <insert id="addVideoComment" parameterType="com.HITwh.TVStudio.domain.VideoComment">
         insert into
             t_video_comment(
                 videoId,
@@ -237,7 +237,7 @@
             and rootId is null
     </select>
 
-    <select id="pageListVideoComments" parameterType="java.util.Map" resultType="com.imooc.TVStudio.domain.VideoComment">
+    <select id="pageListVideoComments" parameterType="java.util.Map" resultType="com.HITwh.TVStudio.domain.VideoComment">
         select
             *
         from
@@ -249,7 +249,7 @@
         limit #{start}, #{limit}
     </select>
 
-    <select id="batchGetVideoCommentsByRootIds" parameterType="java.util.List" resultType="com.imooc.TVStudio.domain.VideoComment">
+    <select id="batchGetVideoCommentsByRootIds" parameterType="java.util.List" resultType="com.HITwh.TVStudio.domain.VideoComment">
         select
             *
         from
@@ -262,7 +262,7 @@
         order by id
     </select>
 
-    <select id="getVideoDetails" parameterType="java.lang.Long" resultType="com.imooc.TVStudio.domain.Video">
+    <select id="getVideoDetails" parameterType="java.lang.Long" resultType="com.HITwh.TVStudio.domain.Video">
         select
             *
         from
@@ -271,7 +271,7 @@
             id = #{id}
     </select>
 
-    <insert id="addVideoView" parameterType="com.imooc.TVStudio.domain.VideoView">
+    <insert id="addVideoView" parameterType="com.HITwh.TVStudio.domain.VideoView">
         insert into
             t_video_view(
                 videoId,
@@ -297,7 +297,7 @@
             videoId = #{videoId}
     </select>
 
-    <select id="getVideoView" parameterType="java.util.Map" resultType="com.imooc.TVStudio.domain.VideoView">
+    <select id="getVideoView" parameterType="java.util.Map" resultType="com.HITwh.TVStudio.domain.VideoView">
         select
             *
         from
@@ -318,7 +318,7 @@
             </if>
     </select>
 
-    <select id="getAllUserPreference" resultType="com.imooc.TVStudio.domain.UserPreference">
+    <select id="getAllUserPreference" resultType="com.HITwh.TVStudio.domain.UserPreference">
         select
             userId,
             videoId,
@@ -333,7 +333,7 @@
         group by userId, videoId
     </select>
 
-    <select id="batchGetVideosByIds" resultType="com.imooc.TVStudio.domain.Video">
+    <select id="batchGetVideosByIds" resultType="com.HITwh.TVStudio.domain.Video">
         select
             *
         from
@@ -366,7 +366,7 @@
             </foreach>
     </insert>
 
-    <select id="getVideoBinaryImages" parameterType="java.util.Map" resultType="com.imooc.TVStudio.domain.VideoBinaryPicture">
+    <select id="getVideoBinaryImages" parameterType="java.util.Map" resultType="com.HITwh.TVStudio.domain.VideoBinaryPicture">
         select
             *
         from
@@ -381,7 +381,7 @@
             </if>
     </select>
 
-    <select id="getVideoTagsByVideoId" parameterType="java.lang.Long" resultType="com.imooc.TVStudio.domain.VideoTag">
+    <select id="getVideoTagsByVideoId" parameterType="java.lang.Long" resultType="com.HITwh.TVStudio.domain.VideoTag">
         select
             tvt.videoId,
             tvt.tagId,

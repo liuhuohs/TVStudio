@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD MAPPER 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.imooc.bilibili.dao.UserDao">
+<mapper namespace="com.HITwh.TVStudio.dao.UserDao">
 
-    <select id="getUserByPhone" parameterType="java.lang.String" resultType="com.imooc.TVStudio.domain.User">
+    <select id="getUserByPhone" parameterType="java.lang.String" resultType="com.HITwh.TVStudio.domain.User">
         select
             *
         from
@@ -13,7 +13,7 @@
             phone = #{phone}
     </select>
 
-    <insert id="addUser" parameterType="com.imooc.TVStudio.domain.User" useGeneratedKeys="true" keyProperty="id">
+    <insert id="addUser" parameterType="com.HITwh.TVStudio.domain.User" useGeneratedKeys="true" keyProperty="id">
         insert into
             t_user(
                phone,
@@ -30,7 +30,7 @@
             )
     </insert>
 
-    <insert id="addUserInfo" parameterType="com.imooc.TVStudio.domain.UserInfo">
+    <insert id="addUserInfo" parameterType="com.HITwh.TVStudio.domain.UserInfo">
         insert into
             t_user_info(
                 userId,
@@ -51,7 +51,7 @@
                 )
     </insert>
 
-    <select id="getUserById" parameterType="java.lang.Long" resultType="com.imooc.TVStudio.domain.User">
+    <select id="getUserById" parameterType="java.lang.Long" resultType="com.HITwh.TVStudio.domain.User">
         select
             *
         from
@@ -60,7 +60,7 @@
             id = #{id}
     </select>
 
-    <select id="getUserInfoByUserId" parameterType="java.lang.Long" resultType="com.imooc.TVStudio.domain.UserInfo">
+    <select id="getUserInfoByUserId" parameterType="java.lang.Long" resultType="com.HITwh.TVStudio.domain.UserInfo">
         select
             *
         from
@@ -69,7 +69,7 @@
             userId = #{userId}
     </select>
 
-    <update id="updateUsers" parameterType="com.imooc.TVStudio.domain.User">
+    <update id="updateUsers" parameterType="com.HITwh.TVStudio.domain.User">
         update
             t_user
         set
@@ -87,7 +87,7 @@
             id = #{id}
     </update>
 
-    <select id="getUserByPhoneOrEmail" parameterType="java.lang.String" resultType="com.imooc.TVStudio.domain.User">
+    <select id="getUserByPhoneOrEmail" parameterType="java.lang.String" resultType="com.HITwh.TVStudio.domain.User">
         select
             *
         from
@@ -96,7 +96,7 @@
             phone = #{phone} or email = #{email}
     </select>
 
-    <update id="updateUserInfos" parameterType="com.imooc.TVStudio.domain.UserInfo">
+    <update id="updateUserInfos" parameterType="com.HITwh.TVStudio.domain.UserInfo">
         update
             t_user_info
         set
@@ -120,7 +120,7 @@
             userId = #{userId}
     </update>
 
-    <select id="getUserInfoByUserIds" resultType="com.imooc.TVStudio.domain.UserInfo">
+    <select id="getUserInfoByUserIds" resultType="com.HITwh.TVStudio.domain.UserInfo">
         select
             *
         from
@@ -147,7 +147,7 @@
             </if>
     </select>
 
-    <select id="pageListUserInfos" parameterType="java.util.Map" resultType="com.imooc.TVStudio.domain.UserInfo">
+    <select id="pageListUserInfos" parameterType="java.util.Map" resultType="com.HITwh.TVStudio.domain.UserInfo">
         select
             *
         from
@@ -190,7 +190,7 @@
             )
     </insert>
 
-    <select id="getRefreshTokenDetail" parameterType="java.lang.String" resultType="com.imooc.TVStudio.domain.RefreshTokenDetail">
+    <select id="getRefreshTokenDetail" parameterType="java.lang.String" resultType="com.HITwh.TVStudio.domain.RefreshTokenDetail">
         select
             *
         from
@@ -208,7 +208,7 @@
             userId = #{userId}
     </select>
 
-    <select id="batchGetUserInfoByUserIds" resultType="com.imooc.TVStudio.domain.UserInfo">
+    <select id="batchGetUserInfoByUserIds" resultType="com.HITwh.TVStudio.domain.UserInfo">
         select
             *
         from

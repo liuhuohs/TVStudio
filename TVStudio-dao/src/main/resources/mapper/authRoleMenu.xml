@@ -2,13 +2,13 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD MAPPER 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.imooc.bilibili.dao.AuthRoleMenuDao">
+<mapper namespace="com.HITwh.TVStudio.dao.AuthRoleMenuDao">
 
-    <resultMap id="AuthMenuResultMap" type="com.imooc.TVStudio.domain.auth.AuthRoleMenu">
+    <resultMap id="AuthMenuResultMap" type="com.HITwh.TVStudio.domain.auth.AuthRoleMenu">
         <id column="id" property="id"/>
         <id column="roleId" property="roleId"/>
         <id column="menuId" property="menuId"/>
-        <association property="authMenu" javaType="com.imooc.TVStudio.domain.auth.AuthMenu">
+        <association property="authMenu" javaType="com.HITwh.TVStudio.domain.auth.AuthMenu">
             <id column="name" property="name"/>
             <id column="code" property="code"/>
         </association>

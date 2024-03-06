@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD MAPPER 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.imooc.bilibili.dao.UserMomentsDao">
+<mapper namespace="com.HITwh.TVStudio.dao.UserMomentsDao">
 
-    <insert id="addUserMoments" parameterType="com.imooc.TVStudio.domain.UserMoment" useGeneratedKeys="true" keyProperty="id">
+    <insert id="addUserMoments" parameterType="com.HITwh.TVStudio.domain.UserMoment" useGeneratedKeys="true" keyProperty="id">
         insert into
             t_user_moments(
                 userId,

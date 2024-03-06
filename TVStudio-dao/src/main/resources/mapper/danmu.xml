@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.imooc.bilibili.dao.DanmuDao">
+<mapper namespace="com.HITwh.TVStudio.dao.DanmuDao">
 
 
-    <insert id="addDanmu" parameterType="com.imooc.TVStudio.domain.Danmu">
+    <insert id="addDanmu" parameterType="com.HITwh.TVStudio.domain.Danmu">
         insert into
             t_danmu(
                 userId,
@@ -20,7 +20,7 @@
             )
     </insert>
 
-    <select id="getDanmus" parameterType="java.util.Map" resultType="com.imooc.TVStudio.domain.Danmu">
+    <select id="getDanmus" parameterType="java.util.Map" resultType="com.HITwh.TVStudio.domain.Danmu">
         select
             *
         from

@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD MAPPER 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.imooc.bilibili.dao.AuthRoleDao">
+<mapper namespace="com.HITwh.TVStudio.dao.AuthRoleDao">
 
-    <select id="getRoleByCode" parameterType="java.lang.String" resultType="com.imooc.TVStudio.domain.auth.AuthRole">
+    <select id="getRoleByCode" parameterType="java.lang.String" resultType="com.HITwh.TVStudio.domain.auth.AuthRole">
         select
             *
         from

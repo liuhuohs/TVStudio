@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD MAPPER 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.imooc.bilibili.dao.UserRoleDao">
+<mapper namespace="com.HITwh.TVStudio.dao.UserRoleDao">
 
-    <select id="getUserRoleByUserId" parameterType="java.lang.Long" resultType="com.imooc.TVStudio.domain.auth.UserRole">
+    <select id="getUserRoleByUserId" parameterType="java.lang.Long" resultType="com.HITwh.TVStudio.domain.auth.UserRole">
         select
             ur.*,
             ar.name roleName,
@@ -16,7 +16,7 @@
             ur.userId = #{userId}
     </select>
 
-    <insert id="addUserRole" parameterType="com.imooc.TVStudio.domain.auth.UserRole">
+    <insert id="addUserRole" parameterType="com.HITwh.TVStudio.domain.auth.UserRole">
         insert into
             t_user_role(
                             userId,
